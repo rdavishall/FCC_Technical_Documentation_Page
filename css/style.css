@@ -1,0 +1,112 @@
+/* Colors */
+:root {
+  --primary-color: #c72727;
+  --secondary-color: #1a94cc;
+  --light-color: #f3f3f3;
+  --dark-color: #333;
+}
+
+/* Global Styling */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6;
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: var(--dark-color);
+  color: var(--light-color)
+}
+
+header {
+  font-size: 1.8em;
+}
+
+code {
+  color: var(--secondary-color);
+  margin-left: 30px;
+  padding: 10px;
+  display: inline-block;
+  background: #000000;
+}
+
+/* Page Layout */
+#navbar{
+float: left;
+width: 25%;
+height: 100vh;
+overflow-y: auto;
+border-right: solid;
+border-color: rgba(0, 22, 22, 0.4);
+border-right:solid 2px (var(--light-color));
+position: fixed;
+top: 0;
+}
+
+#main-doc{
+float: right;
+width: 75%;
+}
+
+/* Navbar */
+#navbar header{
+text-align: center;
+padding: 20px;
+}
+
+#navbar ul {
+  padding: 0;
+  position: relative;
+  left: -10px;
+}
+
+#navbar ul li {
+  list-style: none;
+  padding: 20px;
+  font-size: 1.3em;
+  width: 100%;
+  border-top: 1px solid #fff;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  color: var(--light-color);
+}
+
+/* Document */
+#main-doc{
+border-left: solid;
+border-color: var(--light-color);
+padding: 15px 50px;
+}
+
+#Reference li a{
+  color: var(--secondary-color);
+}
+
+@media(max-width: 966px){
+  /* Page Layout */
+ #navbar {
+   float: none;
+   width: 100vw;
+   height: 300px;
+   background: var(--dark-color);
+   font-size: 0.6em;
+   overflow-x: hidden;
+ }
+ #navbar header {
+   font-size: 2.8em;
+ }
+ #main-doc {
+   float: none;
+   margin-top: 300px;
+   border-top: solid 2px var(--light-color);
+   border-left: none;
+   width: 100%;
+ }
+ #navbar ul {
+  border: solid 2px var(--light-color);
+  width: 100%;
+ }
+}
